@@ -1,0 +1,2 @@
+cp -r shellgei160/qdata/2/img ./ignore
+time ls ignore/img/*.png | sed 's/\.png$//' | awk '{print $1".png " $1".jpg"}' | xargs -P4 convert

@@ -1,0 +1,8 @@
+seq 5 | xargs mkdir
+seq 5 | xargs rmdir
+
+# -nで指定された数ずつコマンドに渡す
+seq 4 | xargs -n2 mv 
+
+# -I@で@に値を入れて使うことができる
+seq 2 | xargs -I@ mkdir dir_@
