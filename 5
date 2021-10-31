@@ -1,0 +1,7 @@
+# prepare
+cp shellgei160/qdata/5/ntp.conf ./ignore 
+
+grep '^pool ' -R ./ignore | sed 's/^.*:pool //'
+
+# other
+cat ./ignore/ntp.conf | grep '^pool ' | awk '{print $2}'

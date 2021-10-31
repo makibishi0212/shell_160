@@ -3,3 +3,6 @@ cd ignore
 seq 1000000 | sed 's/^/echo $RANDOM > /' | bash
 
 grep -l '^10$' -R . | sed 's/\.\///' | xargs rm
+
+# clean up
+ls -U | xargs -P2 rm
