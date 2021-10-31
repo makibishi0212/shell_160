@@ -1,0 +1,8 @@
+# prepare
+cd ignore
+seq 1000000 | xargs -P2 touch
+
+find . | sed 's/^.\///' | awk '{printf("%d %07d\n",$1,$1)}' | xargs -n2 -P2 mv
+
+# clean up
+ls -U | xargs -P2 rm
