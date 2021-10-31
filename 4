@@ -1,0 +1,5 @@
+# prepare
+cd ignore
+seq 1000000 | sed 's/^/echo $RANDOM > /' | bash
+
+grep -l '^10$' -R . | sed 's/\.\///' | xargs rm
