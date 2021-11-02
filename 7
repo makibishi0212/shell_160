@@ -1,0 +1,4 @@
+#prepare
+cp shellgei160/qdata/7/kakeibo.txt ./ignore
+
+cat ignore/kakeibo.txt| awk 'BEGIN{sum=0}{tax=1.10}{if($2~"^\\*" || $1<"201910"){tax=1.08}}{sum+=int($3*tax)}END{print sum}'
