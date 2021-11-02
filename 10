@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/10/headings.md ./ignore 
+
+cat ./ignore/headings.md | sed -r 's/^# (.+)/\1\n===/;s/^## (.+)/\1\n---/'
