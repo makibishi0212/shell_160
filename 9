@@ -1,0 +1,4 @@
+# prepare
+cp ./shellgei160/qdata/9/log_range.log ./ignore
+
+cat ./ignore/log_range.log | sed -n '/\[24\/Dec\/2016 21/,/25\/Dec\/2016 03/p'  
