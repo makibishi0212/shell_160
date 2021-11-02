@@ -1,0 +1,5 @@
+#prepare
+cp ./shellgei160/qdata/8/access.log ./ignore
+
+cat ignore/access.log | awk -F: '{print $(NF-2)}' | awk '{if($1<12){print "午前"}else{print "午後"}}' | sort | uniq -c
+cat ignore/access.log | grep -o -E "\d\d:\d\d:\d\d " | sed 's/:.*$//' | awk '{if($1<12){print "午前"}else{print "午後"}}' | sort | uniq -c
