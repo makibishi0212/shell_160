@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/11/gijiroku.txt ./ignore
+
+cat ./ignore/gijiroku.txt | xargs -n2 | sed 's/^すず/鈴木/g;s/^さと/佐藤/g;s/^やま/山 田/g;s/ /:/g;s/$/\n/g'
