@@ -1,0 +1,4 @@
+ test -e unfile || touch unfile
+
+ # after
+ rm unfile
