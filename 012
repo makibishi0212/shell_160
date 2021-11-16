@@ -1,0 +1,2 @@
+bash double.bash 50
+echo 50 | bash double.bash
