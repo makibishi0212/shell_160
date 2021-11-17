@@ -1,0 +1,1 @@
+seq 100 |while read x; do echo "羊が${x}匹" ;sleep 1;done

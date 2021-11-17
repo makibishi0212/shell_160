@@ -1,4 +1,7 @@
  test -e unfile || touch unfile
 
+ #other
+ cat <> unfile
+
  # after
  rm unfile
