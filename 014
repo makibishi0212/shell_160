@@ -1,1 +1,4 @@
 seq 100 |while read x; do echo "羊が${x}匹" ;sleep 1;done
+
+#other
+for n in $(seq 1000); do echo "羊が${n}匹";sleep 1;done
