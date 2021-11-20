@@ -1,0 +1,9 @@
+#prepare
+mkdir ./ignore/dirs
+cp -r ./shellgei160/qdata/21/* ./ignore/dirs
+
+((cd ./ignore/dirs/;echo dir_{a,c}/**/{file_1,file_2}) && (cd ./ignore/dirs/;echo dir_b/{file_1,file_2})) | sed 's/ /\n/g' | sort
+
+#other
+cd ignore/dirs
+find . | grep -E /file_\[12\] | grep -v "\./dir_b/d"
