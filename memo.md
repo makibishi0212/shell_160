@@ -1,3 +1,11 @@
+### 変数
+
+```
+$RANDOM [0,32767]の区間のランダムな値
+$$ 自身のプロセスID
+$PIPESTATUS[@] パイプラインの全ての終了ステータス
+```
+
 ### ビルトインコマンドか判定
 
 ```
@@ -72,3 +80,18 @@ kill -SIGKILL 25636
 9 KILL (non-catchable, non-ignorable kill)
 14 ALRM (alarm clock)
 15 TERM (software termination signal)
+
+### pipefail
+
+パイプでつながったコマンドのどれかの終了ステータスが 1 以上なら、その時点でスクリプトが終了する
+
+```
+set -o pipefail
+```
+
+### true,false
+
+```
+true 終了ステータス0を返すだけのコマンド
+false 終了ステータス1を返すだけのコマンド
+```

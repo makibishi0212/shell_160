@@ -1,0 +1,5 @@
+#prepare
+cd ignore
+mkdir tmp
+
+trap 'rmdir ./tmp' EXIT

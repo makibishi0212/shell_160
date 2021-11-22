@@ -1,0 +1,5 @@
+#prepare
+echo $$
+kill -STOP $$
+
+kill -CONT 29240
