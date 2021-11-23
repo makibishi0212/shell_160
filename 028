@@ -1,0 +1,9 @@
+#prepare
+cd ignore
+mkdir \~ -Rf
+
+rm -R ./\~
+rm -R ./-Rf 
+
+#other
+rm -R -- -Rf

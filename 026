@@ -1,0 +1,1 @@
+ trap '早く帰れ' SIGCHLD

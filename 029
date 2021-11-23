@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/29/fb.bash ./ignore 
+
+bash -n ./ignore/fb.bash |& sed -E 's/(.* line )(.*)(:.*)/\2/' | uniq
