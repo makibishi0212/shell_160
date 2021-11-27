@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/35/speech.txt ./ignore 
+
+cat ./ignore/speech.txt | ggrep -oP '^.*?[ア-ン]{4}(?=[ア-ン])' | awk '{$2=$1}$1=length($2)'

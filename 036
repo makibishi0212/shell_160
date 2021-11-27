@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/36/message.txt ./ignore 
+
+cat ./ignore/message.txt | sed 's/)(/)\n(/g' | sed 's/)/(/g' | ggrep -E '^(.*)([^)(]*)\1$' | tr -d '(' | xargs | sed 's/ //g'

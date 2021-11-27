@@ -180,3 +180,48 @@ rev text.txt
 grep -f exp_file ...
 #-f の後に何も書かない(環境によっては-)の場合は標準入力から受け取る
 ```
+
+### nkf
+
+```bash
+echo ナニカシラ | nkf --hiragana #ひらがなにする -hでも可
+echo なにかしら | nkf --katakana #カタカナにする
+echo ナニカシラ | nkf -Z4        #カタカナの全角半角切り替え
+echo ﾅﾆｶｼﾗ | nkf -Z             #半角を殲滅
+```
+
+### trans コマンド
+
+翻訳。要インターネット接続
+https://www.soimort.org/translate-shell/#installation からインストール
+
+```bash
+# 日本語->英語
+echo 大盤石を覆すが如し  | trans ja:en
+```
+
+### mecab コマンド
+
+形態素解析。
+
+```
+brew install mecab
+brew install mecab-ipadic
+```
+
+```bash
+echo 大盤石を覆すが如し  | mecab
+```
+
+### pandoc コマンド
+
+ドキュメントのフォーマット変換。
+
+```
+brew install pandoc
+```
+
+```bash
+#markdown->html
+echo '# 見出し' | pandoc
+```
