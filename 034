@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/34/furigana.txt ./ignore 
+
+cat ./ignore/furigana.txt | gsed -E 's/^(.*)(.*) ([^あ-ん]*)\2$/\3(\1)\2/'

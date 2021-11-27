@@ -1,0 +1,4 @@
+#prepare
+cp shellgei160/qdata/32/kaibun.txt ./ignore 
+
+rev ./ignore/kaibun.txt | grep -xf ./ignore/kaibun.txt

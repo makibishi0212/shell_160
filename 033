@@ -1,0 +1,11 @@
+#prepare
+cp shellgei160/qdata/33/kaibun ./ignore 
+cp shellgei160/qdata/33/not_kaibun ./ignore
+brew install coreutils
+
+#(注: tacコマンドはmac標準ではない)
+paste <(cat ./ignore/not_kaibun | grep -o .) <(cat ./ignore/not_kaibun | grep -o .|tac) | awk '$1!=$2'
+paste <(cat ./ignore/kaibun | grep -o .) <(cat ./ignore/kaibun | grep -o .|tac) | awk '$1!=$2'
+
+#other
+diff <(cat ./ignore/not_kaibun | grep -o .) <(cat ./ignore/not_kaibun | grep -o .|tac) | awk '$1!=$2'

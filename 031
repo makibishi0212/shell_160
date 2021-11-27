@@ -1,0 +1,6 @@
+#prepare
+cp shellgei160/qdata/31/iampen.txt ./ignore 
+brew install gnu-sed 
+
+#(注: mac標準のsedはgnu拡張ではないので\Uが動作しないので、sedの代わりにgsedを使っている)
+cat ./ignore/iampen.txt | gsed -E 's/(.*<strong>)(.*)(<\/strong>.*)/\1\U\2\E\3/'

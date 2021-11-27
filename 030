@@ -1,0 +1,4 @@
+#prepare
+bash
+
+echo ${!BASH*}
