@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/41/annotation.md ./ignore
+
+cat ./ignore/annotation.md | ggrep -oE '\[\^.*\]:?' | sed 's/]$/] x/;s/]:$/] y/' | sort | awk '{print $2,$1}' | uniq -f1 -u

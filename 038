@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/38/this_is_it.txt ./ignore
+
+cat ./ignore/this_is_it.txt | sed -E 's/&(amp;)+//g;s/quot;/"/g'

@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/37/diarydiary.txt ./ignore 
+
+cat ./ignore/diarydiary.txt| tr -d '\n' | ggrep -Po '(.*)\1'

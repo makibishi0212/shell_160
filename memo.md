@@ -225,3 +225,11 @@ brew install pandoc
 #markdown->html
 echo '# 見出し' | pandoc
 ```
+
+### yes コマンド
+
+echo の無限版
+
+```
+yes takasu
+```

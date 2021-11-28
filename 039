@@ -1,0 +1,10 @@
+#prepare
+cp ./shellgei160/qdata/39/bash_description.txt ./ignore
+
+cat ./ignore/bash_description.txt | sed -E 's/ / \n/g' | awk '{L+=length}L>31{print "";L=length}{printf $0}' | awk '{sub(/ $/,"");print}'
+
+#other
+cat ./ignore/bash_description.txt | fold -s -w 31
+
+#other?
+cat ./ignore/bash_description.txt | gsed -E 's/(.{20}) /\1\n/g'
