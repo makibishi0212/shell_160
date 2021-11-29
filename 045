@@ -1,0 +1,6 @@
+#prepare
+cp -r ./shellgei160/qdata/45/sh_highschool ./ignore
+
+#surrender
+#注: mac環境だとuniqの-Dオプションが使えない？
+awk 'NF{print NR,"\0"$0}' ./ignore/sh_highschool | sort -k2,2 | uniq -f 1 -D | sort -k1,1n | awk -F '\0' 'n+1!=$1{print t,"\0",ns;t=ns=""}{n=$1;t=t$2;ns=ns n}END{print t,"\0",ns}' | awk -F '\0' '{a[$1]=a[$1] ? a[$1]"-"$2 : $2}END{for(k in a)print a[k]}' | awk NF | sed 's/^ //'
