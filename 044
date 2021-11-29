@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/44/diary.txt ./ignore
+
+cat ./ignore/diary.txt | gsed -Ez 's/シ\n?ェ\n?ル\n?ス\n?ク\n?リ\n?プ\n?ト/\%&%/g' | gsed '/%/s/$/ @/;s/%//g'

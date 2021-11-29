@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/42/item.md ./ignore 
+
+cat ./ignore/bunken.txt| gsed -z 's/\nhttps/ https/g;' | sort | grep https
