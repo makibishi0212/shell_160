@@ -1,0 +1,7 @@
+#prepare
+cp ../shellgei160/qdata/practice/master.txt ../ignore
+cp ../shellgei160/qdata/practice/transaction.txt ../ignore
+
+join ../ignore/master.txt ../ignore/transaction.txt
+join -a 2 ../ignore/master.txt ../ignore/transaction.txt
+ join -a 1 -a 2 ../ignore/master.txt ../ignore/transaction.txt

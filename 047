@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/47/mom.csv ./ignore
+
+cat ./ignore/mom.csv | awk -F"," '{print $0,$2,n;n=$2}' | awk  '{printf $1","}NR==1{print "*"}NR>1{print "+"$2/$3*100-100"%"}' | sed 's/+-/-/'

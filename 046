@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/46/const26.txt ./ignore 
+
+cat ./ignore/const26.txt | mecab | awk -F'[\t,]' '{print $1","$(NF-1)}' | sed -E 's/(.*),(.*)/\1(\2)/;' | gsed -E 's/([あ-ん]+)(\([ア-ン]*\))/\1/;s/\([^ア-ン]*\)//' | tr -d '\n' | sed 's/EOS/\n/'  
