@@ -1,3 +1,5 @@
 #prepare
 cp ./shellgei160/qdata/50/stones_master ./ignore
 cp ./shellgei160/qdata/50/sales ./ignore
+
+cat ./ignore/sales| awk '{a[$3$4]+=$5}END{for(k in a)print k,a[k]}' | sort -nk 1 | join <(sed 's/ //' ./ignore/stones_master) - | awk '{print $2,$3*$4}'| column -t
