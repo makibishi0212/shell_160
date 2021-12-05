@@ -1,0 +1,5 @@
+#prepare
+cp ./shellgei160/qdata/52/data_U ./ignore
+cp ./shellgei160/qdata/52/data_V ./ignore
+
+awk 'FNR==1{$1="";h=$0}FNR!=1{print FILENAME,$0,h,NF-1}' ./ignore/data_U ./ignore/data_V | sed 's/\.\/ignore\/data_//' | awk '{for(i=NF-$NF;i<NF;i++)print $1,$2,$i,$(i-$NF)}'
