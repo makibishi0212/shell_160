@@ -239,6 +239,17 @@ echo '# 見出し' | pandoc
 
 echo の無限版
 
-```
+```bash
 yes takasu
+```
+
+### column コマンド
+
+出力を揃える
+
+```bash
+column -t
+
+# 例
+seq 20 | awk '{print $1,$1}' | column -t
 ```

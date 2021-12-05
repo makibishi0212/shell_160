@@ -1,0 +1,3 @@
+#prepare
+cp ./shellgei160/qdata/50/stones_master ./ignore
+cp ./shellgei160/qdata/50/sales ./ignore
