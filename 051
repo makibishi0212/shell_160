@@ -1,0 +1,5 @@
+#prepare
+cp ./shellgei160/qdata/51/scores.txt ./ignore
+cp ./shellgei160/qdata/51/students.txt ./ignore 
+
+cat ./ignore/scores.txt| awk '{$1=sprintf("%03d",$1);print}'| sort | join -a 1 <(cat ./ignore/students.txt) - | awk '$3<0{print $1,$2,0}$3>=0{print}'
