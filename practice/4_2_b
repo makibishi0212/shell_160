@@ -1,0 +1,4 @@
+#prepare
+cp ../shellgei160/qdata/practice/data.csv ../ignore
+
+nkf -wLux ../ignore/data.csv | ruby -r csv -ne 'CSV($_).each{|row| puts row[1]}'

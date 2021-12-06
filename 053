@@ -1,0 +1,5 @@
+#prepare
+cp ./shellgei160/qdata/53/devicelist.txt ./ignore 
+cp ./shellgei160/qdata/53/measurement.txt ./ignore 
+
+cat ./ignore/devicelist.txt | sort -k 2 | awk '{print $2,$1}' | join -a 1 - <(cat ./ignore/measurement.txt | sort -k 1 | awk '{print $1,$2}') | awk '$3<=0{print $0,"@@@@"}$3>0{print}' | gsed -E 's/xxxx\.(.{4})\.(.{4}) (.{2}) (.{4})/\3 \4.\1.\2/' | sort

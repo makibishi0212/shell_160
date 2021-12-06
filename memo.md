@@ -1,3 +1,11 @@
+### -
+
+- で標準入力から受け取った値をコマンドに渡せる
+
+```bash
+echo "abcdef" | diff - <(echo "abcdefg")
+```
+
 ### 出力を横に並べる
 
 ```bash
@@ -252,4 +260,44 @@ column -t
 
 # 例
 seq 20 | awk '{print $1,$1}' | column -t
+```
+
+### jq で特定のフィールドの値を表示
+
+```bash
+somthing.json | jq .a.b.c
+```
+
+### jq で計算
+
+```bash
+somthing.json | jq '.a.b.c + a.b.d'
+```
+
+```bash
+#上と同じ
+cat something.json| jq '.a.b | .c +.d'
+```
+
+### sed で最後の行を削除
+
+```bash
+seq 3 | sed '$d'
+```
+
+```bash
+# 4行目以降を削除する
+seq 10 | sed '4,$d'
+```
+
+### sed で特定行を 2 度表示
+
+```bash
+#最後の行を2度表示
+seq 10 | sed '$p'
+```
+
+```bash
+#２行目から2度表示
+seq 10 | sed '2,$p'
 ```

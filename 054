@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/54/fruits.json ./ignore
+
+cat ./ignore/fruits.json | jq -r ".Fruits[]|\"echo '\(.)' | jq . > \(.Name).json\"" | sh

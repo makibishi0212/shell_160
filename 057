@@ -1,0 +1,7 @@
+#prepare
+cp ./shellgei160/qdata/57/table.md ./ignore 
+
+cat ./ignore/table.md | pandoc -t gfm
+
+#other
+cat ./ignore/table.md | sed 's/|/ & /g' | column -t

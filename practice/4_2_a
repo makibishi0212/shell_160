@@ -1,0 +1,4 @@
+#prepare
+cp ../shellgei160/qdata/practice/article.json ../ignore
+
+cat ../ignore/article.json| jq .year.start
