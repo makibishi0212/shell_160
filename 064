@@ -1,0 +1,1 @@
+seq -f '20210101 %g day' 0 364 | gdate -f - '+%F %w' | awk '$2==2{print $1}' | sed 's/-/ /g' | awk '{print $0,++a[$2]}' | awk '$4==3{print $1,$2,$3}'
