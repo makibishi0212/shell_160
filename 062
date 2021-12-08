@@ -1,0 +1,4 @@
+#prepare
+https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv からcsvをダウンロードしてきて、./ignoreに置く
+
+nkf -wLux ./ignore/syukujitsu.csv | sort | ggrep -P '\d{4}' | ggrep -E '^(20(19|20|21))' | gsed -E 's/(.*)\/(.+)\/(.+),(.*)/\1-\2-\3 \4/'

@@ -1,0 +1,6 @@
+#prepare
+brew install coreutils
+
+gdate -d '1000000 day ago'
+gdate -d '100000 days ago'
+gdate -d '100000000 days'
