@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/59/data.csv ./ignore
+
+cat ./ignore/data.csv | ggrep -Eno '[^,"]*|"([^"]*("")*)*"' | sed 's/:.*//' | uniq -c | awk '$1==2{print $2}' 

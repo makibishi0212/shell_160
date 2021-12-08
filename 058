@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/58/num.csv ./ignore 
+
+cat ./ignore/num.csv | tr ',' ' ' | xargs -n 1 | tr -d ' ' | xargs | tr ' ' + | bc
