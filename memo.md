@@ -165,6 +165,31 @@ bash -n シェルスクリプト
 set
 ```
 
+### awk
+
+#### print
+
+出力
+
+```bash
+echo 1 | awk '{print $1}'
+```
+
+#### sprintf
+
+値をフォーマットする
+
+```bash
+echo 1 | awk '{$1=sprintf("%03d",$1);print}'
+```
+
+#### -F オプション
+
+```bash
+# 区切り文字を指定する
+awk -F'[/ ,]' '{...}'
+```
+
 ### grep コマンドの正規表現オプション
 
 ```bash
@@ -307,4 +332,17 @@ seq 10 | sed '2,$p'
 ```bash
 #フォーマットする
 seq -f 'count:%g' 100
+```
+
+# join コマンド
+
+2 つの入力を先頭の要素を使って結合
+
+```
+join file1 file2
+```
+
+```
+# aオプションで外部結合
+join -a 1 -a 2 file1 file2
 ```

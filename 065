@@ -1,0 +1,1 @@
+join -a 2  <(cat ./ignore/syukujitsu.csv | nkf -Lux | grep '^2019' | awk -F'[/ ,]' '{printf "%d-%02d-%02d %s\n",$1,$2,$3,$4}') <(seq -f '2019-01-01 %g day' 0 364 | gdate -f - '+%Y-%m-%d %a' ) | ggrep -v -E '2019-.{2}-.{2} [月火水 木金]' | wc -l
