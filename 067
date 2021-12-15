@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/67/dinner ./ignore
+
+join <(cat ./ignore/dinner | awk -F'[ ]' '{print $1}' | sed -E 's/(.{4})(.{2})(.{2})/\1-\2-\3/' | gdate -f - '+%Y%m%d %a') <(cat ./ignore/dinner) | awk '{print $1,$3 > $2}'
