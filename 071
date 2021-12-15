@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/71/uni.txt ./ignore
+
+cat ./ignore/uni.txt | grep -o . | while read s; do echo -n $s" "; echo -n $s | wc -c; done

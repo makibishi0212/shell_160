@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/70/excel_hogan.txt ./ignore 
+
+cat ./ignore/excel_hogan.txt | sed 's/./&_/g' | sed 's/"/""/g' | sed 's/,/","/g' | tr _ , | nkf -sLwx > ./ignore/hoge.csv

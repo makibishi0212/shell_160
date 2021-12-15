@@ -1,0 +1,4 @@
+#prepare
+cp ../shellgei160/qdata/practice/shift_jis.txt ../ignore 
+
+cat ../ignore/shift_jis.txt | iconv -f SHIFT_JIS -t UTF-8

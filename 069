@@ -1,0 +1,1 @@
+printf "%s 9 1sec ago \n" {1970..2040}-{01,07}-01 | TZ=right/Japan gdate -f- | grep :60
