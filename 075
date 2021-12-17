@@ -1,0 +1,5 @@
+#prepare
+cp ./shellgei160/qdata/75/minutes.txt ./ignore 
+
+# s-jisに変換するとunicodeにしか存在しない絵文字が消え、再度utf-8に戻すと絵文字がない状態になっている
+nkf -s ./ignore/minutes.txt | nkf -w
