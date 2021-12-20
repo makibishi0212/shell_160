@@ -1,0 +1,5 @@
+#prepare
+cp ./shellgei160/qdata/77/* ./ignore
+
+#注: ggrepじゃないとできない
+ls ./ignore/meme_* | xargs -I@ sh -c "ggrep -aH . @ | nkf" | grep 山田 | gsed -E 's/^(.*):(.*)/\1/'

@@ -6,6 +6,14 @@
 echo "abcdef" | diff - <(echo "abcdefg")
 ```
 
+### dev/null
+
+捨て場
+
+```bash
+echo a > /dev/null
+```
+
 ### 出力を横に並べる
 
 ```bash

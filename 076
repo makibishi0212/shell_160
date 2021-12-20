@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/76/* ./ignore 
+
+diff <(cat ./ignore/mac_ls_new.txt)  <(nkf -Z4 ./ignore/mac_ls_old.txt | nkf)

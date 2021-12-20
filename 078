@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/78/* ./ignore
+
+ ggrep -oE '[一-龠]' ./ignore/sample_novel.txt | grep -vf ./ignore/sample_novel.txt 
