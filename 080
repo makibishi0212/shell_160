@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/80/zeroone ./ignore 
+
+cat ./ignore/zeroone | sed 's/^/obase=16;ibase=2;/' | bc | xxd -p -r

@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/82/image.bmp ./ignore 
+
+seq 1 1000 12001 | sed 's/.*/((i++));cat ignore\/image.bmp | tail -c +& | head -c 1000 > image.bmp.$(printf "%02d" $i)/' | bash

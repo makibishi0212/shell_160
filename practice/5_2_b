@@ -1,0 +1,10 @@
+#prepare
+cp ../shellgei160/qdata/practice/game ../ignore 
+cp ../shellgei160/qdata/practice/game.cpp.gz ../ignore 
+cp ../shellgei160/qdata/practice/white_negi.jpg ../ignore 
+
+xxd ../ignore/game | head -n 1
+file ../ignore/white_negi.jpg
+base64 ../ignore/game
+
+echo aaa | base64 | base64 -d # -dは戻す

@@ -1,0 +1,5 @@
+#prepare
+cp ./shellgei160/qdata/81/* ./ignore 
+
+cat ./ignore/bom.txt | xxd -p | sed "s/^efbbbf/$(echo -n '[BOM]' | xxd -p)/" | xxd -p -r
+cat ./ignore/nobom.txt | xxd -p | sed "s/^efbbbf/$(echo -n '[BOM]' | xxd -p)/" | xxd -p -r
