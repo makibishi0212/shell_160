@@ -1,0 +1,1 @@
+echo 🍑 🍓 | xxd -p | gsed -E 's/(.{8})(.{2})/\1 /g;' | awk '{print "obase=16;ibase=16;"toupper("("$1"+"$2")/2")}' | bc | perl -nlE 'say pack("H*",$_)'

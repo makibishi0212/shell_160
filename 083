@@ -1,0 +1,5 @@
+#prepare
+cp ./shellgei160/qdata/83/soleil.bash ./ignore 
+
+cat ./ignore/soleil.bash | gsed 's/\\/\\\\/g' > ./ignore/new_soleil.bash
+bash ./ignore/new_soleil.bash | iconv -f SJIS -t UTF-8
