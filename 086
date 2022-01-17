@@ -1,0 +1,5 @@
+#prepare
+cp ./shellgei160/qdata/86/word_to_num ./ignore 
+cp ./shellgei160/qdata/86/fractions ./ignore 
+
+#surrender

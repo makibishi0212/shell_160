@@ -30,6 +30,12 @@ echo "xxx:yyy" | sed -E 's/(.*):(.*)/\2\1/'
 echo '15152@!2@!00' | gsed -E 's/(.*?)\1/\1/g'
 ```
 
+### sed で特定行のみ抜き出す
+
+```bash
+seq 100 | sed -n '11,14p'
+```
+
 ### 以下は同じ動作
 
 ```bash
@@ -446,4 +452,10 @@ echo aaa | base64 | base64 -d
 
 ```bash
 du | sort -n
+```
+
+### bc を使って 16 進数->8 進数に
+
+```bash
+echo "obase=8;ibase=16;10" | bc
 ```
