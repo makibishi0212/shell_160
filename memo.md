@@ -465,3 +465,9 @@ echo "obase=8;ibase=16;10" | bc
 ```
 echo abcde | tr 'a-z' 'b-z'
 ```
+
+## 素因数分解
+
+```
+factor 20
+```

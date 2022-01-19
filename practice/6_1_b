@@ -1,0 +1,1 @@
+seq 2 99 | factor | gsed -E 's/(.{2}): \1/\1/' | ggrep -v ':' | xargs
