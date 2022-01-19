@@ -459,3 +459,9 @@ du | sort -n
 ```bash
 echo "obase=8;ibase=16;10" | bc
 ```
+
+## 文字を 1 つだけずらす
+
+```
+echo abcde | tr 'a-z' 'b-z'
+```

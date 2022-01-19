@@ -1,0 +1,5 @@
+#prepare
+cp ./shellgei160/qdata/89/ctf-data ./ignore 
+
+#surrender
+zsh: exec format error
