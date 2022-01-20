@@ -1,0 +1,1 @@
+join -j7 <(echo 'a\nb\nc') <(echo 'a\nb\nc') | ggrep -vE '(.) \1' 
