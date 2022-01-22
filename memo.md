@@ -14,6 +14,18 @@ echo "abcdef" | diff - <(echo "abcdefg")
 echo a > /dev/null
 ```
 
+### sort
+
+```bash
+# -kオプション: ソートの基準となる列を指定。-k 2,2 2列目から2列目を基準にソート
+sort -k2,2
+
+# -nオプション: 数字としてソート
+seq  0 100 | sort     #文字列としてソートされる
+seq  0 100 | sort -n  #数字としてソートされる
+
+```
+
 ### 出力を横に並べる
 
 ```bash
@@ -199,6 +211,12 @@ set
 
 ### awk
 
+#### 条件に合うもののみ表示
+
+```bash
+seq 0 100 | awk '$1 < 20'
+```
+
 #### print
 
 出力
@@ -226,6 +244,18 @@ awk -F'[/ ,]' '{...}'
 
 ```bash
 echo abc | awk '{print $3$2$1}' FS=''
+```
+
+#### 特殊変数:ファイル名
+
+```bash
+awk '{print FILENAME}' file_path
+```
+
+#### 特殊変数:引数の数
+
+```bash
+echo '1 2 3' | awk '{print NF}'
 ```
 
 ### grep コマンドの正規表現オプション

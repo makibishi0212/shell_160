@@ -1,0 +1,4 @@
+#prepare
+cp -r shellgei160/qdata/96/ ./ignore/ 
+
+awk '{print $0,FILENAME}' ./ignore/user* | sort | sed 's/.\/ignore\///' | awk 'x!=$1{print "";printf $0}x==$1{printf " "$2}{x=$1}' | grep -E 'user.*user.*user'
