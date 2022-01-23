@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/97/tate.txt ./ignore
+
+cat ./ignore/tate.txt | awk -F "" '{for(i=1;i<NF;i++){a[i]=a[i]$i}}END{for (t in a){i=match(a[t],"た てよみ");if(i){print i,t}}}'
