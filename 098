@@ -1,0 +1,4 @@
+#prepare
+cp ./shellgei160/qdata/98/* ./ignore
+
+comm <(sort ./ignore/list1) <(sort ./ignore/list2) | awk -F'\t' '{print $NF > (NF==3?"common":"oneside")}'
