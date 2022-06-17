@@ -522,3 +522,9 @@ echo $((13#50))
 ```
 comm file1 file2
 ```
+
+## 空文字判定
+
+```
+echo "" | if grep -q '.'; then echo "fill";fi
+```
